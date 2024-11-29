@@ -7,7 +7,7 @@ from taxi.models import Manufacturer, Car
 
 class ModelTests(TestCase):
     def test_manufacturer_string(self):
-        manufacturer = Manufacturer.objects.create(
+        manufacturer = Manufacturer.objects.create_user(
             name="Mazeratti",
             country="Italy"
         )
@@ -17,7 +17,7 @@ class ModelTests(TestCase):
         )
 
     def test_driver_string(self):
-        driver = get_user_model().objects.create(
+        driver = get_user_model().objects.create_user(
             username="anton_best",
             password="anton12345",
             first_name="Anton",
@@ -29,7 +29,7 @@ class ModelTests(TestCase):
         )
 
     def test_car_string(self):
-        manufacturer = Manufacturer.objects.create(
+        manufacturer = Manufacturer.objects.create_user(
             name="Mazeratti",
             country="Italy"
         )
