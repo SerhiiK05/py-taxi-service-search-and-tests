@@ -7,7 +7,7 @@ from taxi.models import Manufacturer, Car
 
 class ModelTests(TestCase):
     def test_manufacturer_string(self):
-        manufacturer = Manufacturer.objects.create_user(
+        manufacturer = Manufacturer.objects.create(
             name="Mazeratti",
             country="Italy"
         )
@@ -29,7 +29,7 @@ class ModelTests(TestCase):
         )
 
     def test_car_string(self):
-        manufacturer = Manufacturer.objects.create_user(
+        manufacturer = Manufacturer.objects.create(
             name="Mazeratti",
             country="Italy"
         )
